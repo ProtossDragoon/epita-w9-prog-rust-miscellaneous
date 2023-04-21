@@ -1,0 +1,9 @@
+[package]
+name = "to_letters"
+version = "0.1.0"
+authors = ["John Smith <john.smith@debug-pro.com>"]
+edition = "2018"
+
+[dependencies]
+structopt = "0.2"
+
