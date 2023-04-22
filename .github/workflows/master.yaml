@@ -1,0 +1,71 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+
+  iterators:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        working-directory: iterators
+        run: cargo build
+      - name: Test
+        working-directory: iterators
+        run: cargo -q test
+      - name: Run
+        working-directory: iterators
+        run: cargo -q run
+
+  jumbled-text:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        working-directory: jumbled_text
+        run: cargo build
+      - name: Test
+        working-directory: jumbled_text
+        run: cargo -q test
+      - name: Run1
+        working-directory: jumbled_text
+        run: cargo -q run -- "Hello World!"
+      - name: Run2
+        working-directory: jumbled_text
+        run: cargo -q run -- "I am not a number! I'm a free man!"
+      - name: Run3
+        working-directory: jumbled_text
+        run: cargo -q run -- "I was born ready!"
+      - name: Run4 (n_arg != 2)
+        working-directory: jumbled_text
+        run: cargo -q run --
+      - name: Run5 (n_arg != 2)
+        working-directory: jumbled_text
+        run: cargo -q run -- Hello World
+
+  to_letters:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        working-directory: to_letters
+        run: cargo build
+      - name: Test
+        working-directory: to_letters
+        run: cargo -q test
+      - name: Run1
+        working-directory: to_letters
+        run: cargo -q run -- 128
+      - name: Run2
+        working-directory: to_letters
+        run: cargo -q run -- 1028
+      - name: Run3 (maxima)
+        working-directory: to_letters
+        run: cargo -q run -- 18446744073709551615
