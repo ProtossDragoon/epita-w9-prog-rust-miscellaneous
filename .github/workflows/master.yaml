@@ -49,7 +49,7 @@ jobs:
         working-directory: jumbled_text
         run: cargo -q run -- Hello World
 
-  to_letters:
+  to-letters:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
