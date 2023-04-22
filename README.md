@@ -1,8 +1,8 @@
 # Rust Strings
 
-EPITA - week8 - Programming
+EPITA - week9 - Programming
 
-![Workflow](https://github.com/ProtossDragoon/epita-w8-prog-rust-strings/actions/workflows/master.yaml/badge.svg)
+![Workflow](https://github.com/ProtossDragoon/epita-w9-prog-rust-miscellaneous/actions/workflows/master.yaml/badge.svg)
 
 ## Quickstart
 
@@ -18,8 +18,8 @@ OR use [docker container](https://github.com/ProtossDragoon/epilinux) for EPITA 
 
 `terminal`
 ```bash
-$ git clone https://github.com/ProtossDragoon/epita-w8-prog-rust-strings.git
-$ cd epita-w8-prog-rust-strings
+$ git clone https://github.com/ProtossDragoon/epita-w9-prog-rust-miscellaneous.git
+$ cd epita-w9-prog-rust-miscellaneous
 ```
 
 `TODO`
