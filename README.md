@@ -1,4 +1,4 @@
-# Rust Strings
+# Rust Miscellaneous
 
 EPITA - week9 - Programming
 
